@@ -1,0 +1,33 @@
+@use "../variables/colors" as color;
+@use "../variables/typographies" as typo;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: typo.$font-title;
+  color: color.$dark;
+  background: color.$background;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}

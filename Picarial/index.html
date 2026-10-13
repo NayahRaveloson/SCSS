@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__logo">
+      <img src="assets/icone/logo.png" alt="">
+    </div>
+    <nav class="header__nav">
+      <ul class="header__menu">
+        <li><a href="#accueil" class="is-active">accueil</a></li>
+        <li><a href="#about">à propos</a></li>
+        <li><a href="#services">services</a></li>
+        <li><a href="#temoignages">témoignages</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      
+    </nav>
+    <div class="header__actions">
+      <span class="header__search">
+        <img src="assets/icone/recherche.png" alt="">
+      </span>
+      <span class="header__lang">FR / EN</span>
+    </div>
+    <button class="header__burger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="hero__text">
+        <span class="badge">Studio de création digitale à Madagascar</span>
+        <h1 class="hero__title">Nous créons des expériences digitales</h1>
+        <p class="hero__paragraph">
+          Picarial accompagne les marques ambitieuses dans leur transformation
+          digitale — stratégie, design, développement
+        </p>
+        <div class="hero__buttons">
+          <a href="#services" class="btn btn--primary">Découvrir nos projets <img src="assets/icone/fleche-droite.png" alt=""></a>
+          <a href="#contact" class="btn btn--secondary">Nous contacter</a>
+        </div>
+      </div>
+      <div class="hero__image">
+        <img src="assets/images/hero-right.png" >
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about__image">
+        <img src="assets/images/about-image-column.png" >
+      </div>
+      <div class="about__text">
+        <span class="eyebrow"> 
+          <img src="assets/icone/Line.png" alt=""> À propos de Picarial</span>
+        <h2 class="about__title">Créateurs de valeur numérique depuis 2018.</h2>
+        <p class="about__paragraph">
+          Depuis 2018, nous sommes une équipe passionnée de designers,
+          développeurs et stratèges digitaux. Notre mission : transformer vos
+          idées en expériences numériques mémorables. Nous croyons en
+          l'alliance parfaite de l'esthétique et de la performance.
+        </p>
+
+        <div class="stats">
+          <div class="stats__item">
+            <span class="stats__number">150 +</span>
+            <span class="stats__label">Projets livrés</span>
+          </div>
+          <div class="stats__item">
+            <span class="stats__number">45+</span>
+            <span class="stats__label">Clients satisfaits</span>
+          </div>
+          <div class="stats__item">
+            <span class="stats__number">8</span>
+            <span class="stats__label">Années d'expérience</span>
+          </div>
+          <div class="stats__item">
+            <span class="stats__number">12</span>
+            <span class="stats__label">Experts créatifs</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="section-heading">
+        <span class="eyebrow eyebrow--center">Nos services</span>
+        <h2 class="section-title">Des solutions complètes pour votre présence digitale</h2>
+      </div>
+      <div class="services__grid">
+        <div class="card">
+          <div class="card__icon">
+            <img src="assets/icone/pinceaux.png" alt="">
+          </div>
+          <h3 class="card__title">Design UI/UX</h3>
+          <p class="card__paragraph">
+            Interfaces intuitives et esthétiques qui convertissent vos
+            visiteurs en clients. Recherche utilisateur poussée et
+            prototypes interactifs de haute fidélité.
+          </p>
+          <a href="#" class="card__link">En savoir plus 
+          <img src="assets/icone/fleche.png" alt="">
+          </a>
+        </div>
+
+        <div class="card">
+          <div class="card__icon">
+            <img src="assets/icone/crocher.png" alt="">
+          </div>
+          <h3 class="card__title">Développement Web</h3>
+          <p class="card__paragraph">
+            Sites performants, sécurisés et sur-mesure avec les technologies
+            les plus récentes. Développement adapté à vos flux de travail et
+            optimisé pour le référencement.
+          </p>
+          <a href="#" class="card__link">En savoir plus 
+          <img src="assets/icone/fleche.png" alt=""></a>
+        </div>
+
+        <div class="card">
+          <div class="card__icon">
+            <img src="assets/icone/stat.png" alt="">
+          </div>
+          <h3 class="card__title">Stratégie Digitale</h3>
+          <p class="card__paragraph">
+            Plans d'action data-driven pour maximiser votre impact en ligne.
+            Positionnement de marque, SEO technique, et accompagnement
+            stratégique sur le long terme.
+          </p>
+          <a href="#" class="card__link">En savoir plus 
+          <img src="assets/icone/fleche.png" alt=""></a>
+        </div>
+
+        <div class="card">
+          <div class="card__icon">
+            <img src="assets/icone/ruban.png" alt="">
+          </div>
+          <h3 class="card__title">Branding & Identité</h3>
+          <p class="card__paragraph">
+            Identités visuelles fortes qui racontent l'histoire de votre
+            marque. Logotype, charte graphique complète et direction
+            artistique de haut niveau.
+          </p>
+          <a href="#" class="card__link">En savoir plus 
+          <img src="assets/icone/fleche.png" alt=""></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials" id="temoignages">
+      <div class="section-heading">
+        <span class="eyebrow eyebrow--center">Témoignages</span>
+        <h2 class="section-title">Ce que disent nos clients</h2>
+      </div>
+      <div class="testimonials__grid">
+        <div class="testimonial">
+          <div class="testimonial__quote">
+            <img src="assets/icone/crocher-droite.png" alt="">
+          </div>
+          <p class="testimonial__text">
+            « Picarial a transformé notre vision en un site web qui dépasse
+            toutes nos attentes. Leur créativité est sans limites. »
+          </p>
+          <div class="testimonial__author">
+            <img src="assets/images/avatar.png" alt="Marie Dupont">
+            <div>
+              <span class="testimonial__name">Marie Dupont</span>
+              <span class="testimonial__role">CEO de LuxeVert</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <div class="testimonial__quote">
+            <img src="assets/icone/crocher-droite.png" alt="">
+          </div>
+          <p class="testimonial__text">
+            « Une équipe réactive, professionnelle et créative. Notre taux
+            de conversion a augmenté de 40% depuis la refonte. »
+          </p>
+          <div class="testimonial__author">
+            <img src="assets/images/avatar-1.png" alt="Thomas Laurent">
+            <div>
+              <span class="testimonial__name">Thomas Laurent</span>
+              <span class="testimonial__role">Directeur Marketing, TechNova</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <div class="testimonial__quote">
+            <img src="assets/icone/crocher-droite.png" alt="">
+          </div>
+          <p class="testimonial__text">
+            « Le meilleur investissement digital que nous ayons fait.
+            Picarial comprend vraiment les besoins de ses clients. »
+          </p>
+          <div class="testimonial__author">
+            <img src="assets/images/avatar-2.png" alt="Sophie Martin">
+            <div>
+              <span class="testimonial__name">Sophie Martin</span>
+              <span class="testimonial__role">Fondatrice de BelleAura</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="cta__content">
+        <h2 class="cta__title">Prêt à donner vie à vos ambitions digitales ?</h2>
+        <p class="cta__paragraph">
+          Discutons de votre projet et construisons ensemble la solution
+          idéale pour votre entreprise.
+        </p>
+        <div class="cta__buttons">
+          <a href="#contact" class="btn btn--orange">Démarrer un projet 
+            <img src="assets/icone/fleche-haut.png" alt=""></a>
+          <a href="#services" class="btn btn--outline-white">Consulter nos tarifs</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="footer__upper">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <img src="assets/icone/Ellipse.png" alt="">
+          <span>Picarial</span>
+        </div>
+        <p class="footer__paragraph">
+          Expériences digitales mémorables et créatrices de valeur.
+          Basée en France, disponible dans le monde entier.
+        </p>
+      </div>
+
+      <div class="footer__links">
+        <div class="footer__col">
+          <h4>Navigation</h4>
+          <a href="#accueil">Accueil</a>
+          <a href="#about">À propos</a>
+          <a href="#services">Services</a>
+          <a href="#">Projets</a>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <a href=" ">hello@picarial.com</a>
+          <a href=" ">+261 34 37 81 43</a>
+          <span>Antananarivo, Madagascar</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__lower">
+      <img src="assets/icone/copyright.png" alt="">
+      <span class="footer__lower-right">
+        <a href="#">Mentions légales</a>
+        <a href="#">Politique de confidentialité</a>
+      </span>
+    </div>
+  </footer>
+  <script src="js/script.js" defer></script>
+</body>
+</html>

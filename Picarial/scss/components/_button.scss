@@ -1,0 +1,46 @@
+@use "../variables/colors" as color;
+@use "../variables/typographies" as typo;
+@use "../base/mixins" as *;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  font-family: typo.$font-title;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+.btn--primary {
+  background: color.$primary-color;
+  color: color.$white;
+}
+
+.btn--secondary {
+  background: transparent;
+  border-color: color.$primary-color;
+  color: color.$primary-color;
+}
+
+.btn--orange {
+  @include btn-pill;
+  background: color.$orange;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.btn--outline-white {
+  @include btn-pill;
+  background: transparent;
+  border-color: color.$white;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}

@@ -1,0 +1,7 @@
+@use "../variables/spacer" as spacer;
+
+.section-heading {
+  max-width: spacer.$container-width;
+  margin: 0 auto 64px auto;
+  text-align: center;
+}

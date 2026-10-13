@@ -1,0 +1,93 @@
+@use "../variables/colors" as color;
+@use "../variables/typographies" as typo;
+@use "../base/mixins" as *;
+
+.footer {
+  @include content-width;
+  padding-block: fluid(40, 80) 40px;
+  background: color.$background;
+}
+
+.footer__upper {
+  display: flex;
+  justify-content: space-between;
+  gap: fluid(32, 64);
+  flex-wrap: wrap; 
+  padding-bottom: 40px;
+}
+
+.footer__brand {
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer__logo {
+  font-family: typo.$font-logo;
+  display: flex;
+  font-weight: 700;
+  font-size: 22px;
+  align-items: center;
+  column-gap: 4px;
+  color: color.$primary-color;
+}
+
+.footer__paragraph {
+  font-size: 14px;
+  line-height: 1.6;
+  color: color.$gray;
+}
+
+.footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: fluid(40, 80);
+}
+
+.footer__col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  h4 {
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: color.$dark;
+    margin-bottom: 4px;
+  }
+
+  a,
+  span {
+    font-size: 14px;
+    color: color.$gray;
+  }
+
+  a {
+    @include hover-primary;
+  }
+}
+
+.footer__lower {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 24px;
+  border-top: 1px solid color.$border-color;
+  font-family: typo.$font-ui;
+  font-size: 13px;
+  color: color.$text-muted;
+}
+
+.footer__lower-right {
+  display: flex;
+  gap: 24px;
+
+  a {
+    @include hover-primary;
+  }
+}

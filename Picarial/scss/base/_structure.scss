@@ -1,0 +1,29 @@
+@use "../variables/colors" as color;
+@use "../variables/typographies" as typo;
+
+.badge {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: rgba(110, 56, 247, 0.06);
+  color: color.$purple;
+  font-family: typo.$font-ui;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.eyebrow {
+  display: block;
+  font-family: typo.$font-logo;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: color.$purple;
+  margin-bottom: 16px;
+}
+
+.eyebrow--center {
+  text-align: center;
+}

@@ -1,0 +1,41 @@
+@use "sass:math";
+@use "../variables/colors" as color;
+@use "../variables/typographies" as typo;
+@use "../variables/spacer" as spacer;
+
+@mixin content-width {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: max(fluid(24, 96), calc((100% - #{spacer.$container-width}) / 2));
+  padding-right: max(fluid(24, 96), calc((100% - #{spacer.$container-width}) / 2));
+}
+
+@mixin card-base {
+  background: color.$white;
+  border: 1px solid color.$border-color;
+  border-radius: 24px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin btn-pill {
+  border-radius: 30px;
+  color: color.$white;
+  font-family: typo.$font-ui;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+@mixin hover-primary {
+  &:hover {
+    color: color.$primary-color;
+  }
+}
+
+@function fluid($min, $max, $min-vw: 375, $max-vw: 1440) {
+  $slope: math.div($max - $min, $max-vw - $min-vw);
+  $intercept: $min - $slope * $min-vw;
+
+  @return clamp(#{$min}px, #{$intercept}px + #{$slope * 100}vw, #{$max}px);
+}

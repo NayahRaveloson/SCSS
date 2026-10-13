@@ -1,0 +1,116 @@
+@use "../variables/colors" as color;
+@use "../variables/typographies" as typo;
+@use "../base/mixins" as *;
+
+.card {
+  @include card-base;
+  gap: 16px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(31, 24, 55, 0.10);
+    border-color: rgba(110, 56, 247, 0.25);
+  }
+}
+
+.card__icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  background: rgba(110, 56, 247, 0.08);
+  border-radius: 16px;
+}
+
+.card__title {
+  font-weight: 600;
+  font-size: 24px;
+  color: color.$dark;
+}
+
+.card__paragraph {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  color: color.$gray;
+}
+
+.card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: typo.$font-title;
+  font-weight: 600;
+  font-size: 14px;
+  color: color.$purple;
+  margin-top: auto;
+
+  img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+  }
+}
+
+.testimonial {
+  @include card-base;
+  gap: 20px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: fluid(24, 40);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(31, 24, 55, 0.08);
+  }
+}
+
+.testimonial__quote {
+  font-family: typo.$font-title;
+  font-size: 40px;
+  color: color.$purple;
+  line-height: 1;
+}
+
+.testimonial__text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: color.$dark;
+}
+
+.testimonial__author {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: auto;
+
+  img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.testimonial__name {
+  font-family: typo.$font-name;
+  font-weight: 600;
+  font-size: 16px;
+  color: color.$dark;
+}
+
+.testimonial__role {
+  font-family: typo.$font-ui;
+  font-size: 13px;
+  color: color.$text-muted;
+}

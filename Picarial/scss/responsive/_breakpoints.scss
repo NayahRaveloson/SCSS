@@ -1,0 +1,45 @@
+$header-nav-breakpoint: 1000px;
+$stack-breakpoint: 480px;
+@media (max-width: $header-nav-breakpoint) {
+
+  .header__menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px;
+    background: #ffffff;
+    border-bottom: 1px solid #e9ecef;
+    box-shadow: 0 12px 24px rgba(31, 24, 55, 0.08);
+  }
+
+  .header__menu.header__menu--open {
+    display: flex;
+  }
+
+  .header__burger {
+    display: flex;
+  }
+}
+
+@media (max-width: $stack-breakpoint) {
+
+  .hero__buttons,
+  .cta__buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .footer__links {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .footer__lower {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

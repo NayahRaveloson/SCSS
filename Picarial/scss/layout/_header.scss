@@ -1,0 +1,89 @@
+@use "../variables/colors" as color;
+@use "../variables/typographies" as typo;
+@use "../base/mixins" as *;
+
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 90px;
+  padding: 0 max(fluid(24, 80, 1000, 1440), calc((100% - 1440px) / 2 + 80px));
+  background: color.$white;
+  transition: background 0.25s ease, box-shadow 0.25s ease;
+  border-bottom: 1px solid color.$border-color;
+}
+
+.header__logo {
+  font-family: typo.$font-logo;
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: -0.5px;
+  color: color.$primary-color;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+
+.header__menu {
+  display: flex;
+  gap: fluid(20, 40, 1000, 1440);
+
+  a {
+    font-family: typo.$font-title;
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: capitalize;
+    color: #1c2422;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+
+    @include hover-primary;
+  }
+
+  a.is-active {
+    color: color.$primary-color;
+    border-bottom-color: color.$mustard;
+  }
+}
+
+.header__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  span {
+    width: 24px;
+    height: 2px;
+    background: color.$dark;
+  }
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-family: typo.$font-logo;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: color.$primary-color;
+}
+
+.header__search {
+  cursor: pointer;
+}
+
+.header.header--scrolled {
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 6px 20px rgba(31, 24, 55, 0.08);
+}
